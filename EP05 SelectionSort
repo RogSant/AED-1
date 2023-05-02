@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void Selecao (int n, int v[]) { //Algoritmo retirado do livro "Algoritmos em linguagem C" de Paulo feofiloff, pagina 62
+    int i, j, min, x;
+    for (i = 0; /*A*/ i < n-1; i++) {
+        min = i;
+        for (j = i+1; j < n; j++)
+            if (v[j] < v[min]) min = j;
+        x = v[i]; v[i] = v[min]; v[min] = x;
+    }
+}
+
+int main() {
+    int k, i;
+    double t;
+    printf("Qual o tamanho do vetor?: ");
+    scanf("%d", &k);
+    int v[k];
+    for(i = 0; i < k; i++) {
+        v[i] = rand();
+    }
+    t = 0.0;
+    clock_t begin = clock();
+    Selecao(k, v);
+    clock_t end = clock();
+    t += (double)(end - begin) / CLOCKS_PER_SEC;
+    printf("Tempo de execução: %f seg", t);
+    return 0;
+}

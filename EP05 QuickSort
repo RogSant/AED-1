@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int Separa (int p, int r, int v[]) {
+int Separa (int p, int r, int v[]) { //Algoritmo retirado do livro "Algoritmos em linguagem C" de Paulo feofiloff, pagina 85
     int c, j, k, t;
     c = v[r]; j = p;
     for (k = p; /*A*/ k < r; k++)
@@ -14,7 +14,7 @@ int Separa (int p, int r, int v[]) {
     return j;
 }
 
-void Quicksort (int p, int r, int v[]) {
+void Quicksort (int p, int r, int v[]) { //Algoritmo retirado do livro "Algoritmos em linguagem C" de Paulo feofiloff, pagina 87
     int j;
     if (p < r) {
         j = Separa (p, r, v);

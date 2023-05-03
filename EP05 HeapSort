@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void SacodeHeap (int m, int v[]) {
+    int t, f = 2;
+    while /*X*/ (f <= m) {
+        if (f < m && v[f] < v[f+1]) ++f;
+        if (v[f/2] >= v[f]) break;
+        t = v[f/2]; v[f/2] = v[f]; v[f] = t;
+        f *= 2;
+    }
+}
+
+void InsereEmHeap (int m, int v[]) {
+    int f = m+1;
+    while /*X*/ (f > 1 && v[f/2] < v[f]) {
+        int t = v[f/2]; v[f/2] = v[f]; v[f] = t;
+        f = f/2;
+    }
+}
+
+void Heapsort (int n, int v[]) {
+    int m;
+    for (m = 1; m < n; m++)
+        InsereEmHeap (m, v);
+    for (m = n; /*X*/ m > 1; m--) {
+        int t = v[1]; v[1] = v[m]; v[m] = t;
+        SacodeHeap (m-1, v);
+    }
+}
+
+int main() {
+    int k, i;
+    double t;
+    printf("Qual o tamanho do vetor?: ");
+    scanf("%d", &k);
+    int v[k + 1];
+    for(i = 1; i < k + 1; i++) {
+        v[i] = rand();
+    }
+    t = 0.0;
+    clock_t begin = clock();
+    Heapsort(k + 1, v);
+    clock_t end = clock();
+    t += (double)(end - begin) / CLOCKS_PER_SEC;
+    printf("Tempo de execução: %f seg", t);
+    return 0;
+}

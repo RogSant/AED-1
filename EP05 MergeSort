@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void Intercala(int p, int q, int r, int v[]) {
+void Intercala(int p, int q, int r, int v[]) { //Algoritmo retirado do livro "Algoritmos em linguagem C" de Paulo feofiloff, pagina 68
     int i, j, k, *w;
     w = malloc ((r-p) * sizeof (int));
     i = p; j = q; k = 0;
@@ -16,7 +16,7 @@ void Intercala(int p, int q, int r, int v[]) {
     free (w);
 }
 
-void Mergesort(int p, int r, int v[]) {
+void Mergesort(int p, int r, int v[]) { //Algoritmo retirado do livro "Algoritmos em linguagem C" de Paulo feofiloff, pagina 70
     if (p < r - 1) {
         int q = (p + r)/2;
         Mergesort (p, q, v);

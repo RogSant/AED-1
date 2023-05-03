@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void SacodeHeap (int m, int v[]) {
+void SacodeHeap (int m, int v[]) { //Algoritmo retirado do livro "Algoritmos em linguagem C" de Paulo feofiloff, pagina 79
     int t, f = 2;
     while /*X*/ (f <= m) {
         if (f < m && v[f] < v[f+1]) ++f;
@@ -12,7 +12,7 @@ void SacodeHeap (int m, int v[]) {
     }
 }
 
-void InsereEmHeap (int m, int v[]) {
+void InsereEmHeap (int m, int v[]) { //Algoritmo retirado do livro "Algoritmos em linguagem C" de Paulo feofiloff, pagina 77
     int f = m+1;
     while /*X*/ (f > 1 && v[f/2] < v[f]) {
         int t = v[f/2]; v[f/2] = v[f]; v[f] = t;
@@ -20,7 +20,7 @@ void InsereEmHeap (int m, int v[]) {
     }
 }
 
-void Heapsort (int n, int v[]) {
+void Heapsort (int n, int v[]) { //Algoritmo retirado do livro "Algoritmos em linguagem C" de Paulo feofiloff, pagina 80
     int m;
     for (m = 1; m < n; m++)
         InsereEmHeap (m, v);

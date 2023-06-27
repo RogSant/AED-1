@@ -1,0 +1,100 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int busca(int i, char* v) {
+    int j = 0;
+    while(v[j] != i) j++;
+    return j;
+}
+char* constroi_posfixa(int f, char* infesq, char* preesq, char* posfixa) {
+     int ind_ext_esq, z, t, y;
+       y = 0;
+       t = 1;
+       ind_ext_esq = busca(infesq[0], preesq);
+       z = ind_ext_esq;
+       if(ind_ext_esq == strlen(infesq) - 1) {
+           while(y < strlen(infesq)) {
+                posfixa[f] = preesq[z];
+                z--, f++, y++;
+           }
+        }
+        else {
+            while(y < strlen(infesq)) {
+                if (infesq[y + 1] == preesq[ind_ext_esq + t]) {
+                    posfixa[f] = preesq[ind_ext_esq + t];
+                    posfixa[f + 1] = preesq[z];
+                    t++, z--;
+                    f = f + 2;
+                    y = y + 2;
+                }
+                else {
+                    posfixa[f] = preesq[z];
+                    z--, f++, y++;
+                }
+
+            }
+        }
+        return posfixa;
+}
+
+int main() {
+   int testes, node;
+   char *prefixa, *infixa;
+   scanf("%i", &testes);
+
+   for(int k = 0; k < testes; k++) {
+   prefixa = malloc(sizeof(prefixa));
+   infixa = malloc(sizeof(infixa));
+   scanf("%i %s %s", &node, prefixa, infixa);
+
+
+   int i, j, h;
+   char *posfixa, *infesq, *infdir;
+   posfixa = malloc(sizeof(posfixa));
+   infesq = malloc(sizeof(infesq));
+   infdir = malloc(sizeof(infdir));
+   i = 0;
+   j = 1;
+   while(infixa[i] != prefixa[0]) {
+        infesq[i] = infixa[i];
+        i++, j++;
+   };
+
+   h = j;
+   while(node > j) {
+        infdir[j - h] = infixa[j];
+        j++;
+   };
+
+   int p, q;
+   char *preesq, *predir;
+   preesq = malloc(sizeof(preesq));
+   predir = malloc(sizeof(predir));
+   p = 1;
+   while(p <= strlen(infesq)) {
+        preesq[p - 1] = prefixa[p];
+        p++;
+   };
+
+   q = p;
+   while(p < strlen(prefixa)) {
+        predir[p - q] = prefixa[p];
+        p++;
+   };
+
+   //construir a arvore
+
+   constroi_posfixa(0, infesq, preesq, posfixa);
+   constroi_posfixa(strlen(infesq), infdir, predir, posfixa);
+   posfixa[strlen(prefixa) - 1] = prefixa[0];
+
+
+    printf("%s\n", posfixa);
+   }
+
+
+
+    return 0;
+
+}

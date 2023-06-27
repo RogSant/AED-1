@@ -1,0 +1,82 @@
+Rogério Camilo dos Santos RA: 148006
+
+    Resumo sobre o livro "Algoritmos em Linguagem C", de Paulo Feofiloff
+
+  “Algoritmos em Linguagem C” é um livro escrito pelo professor Paulo Feofiloff
+e publicado em 2009, no qual se encontra um curso introdutório sobre algoritmos e
+estruturas de dados. Com uma linguagem simples e recheado de exemplos práticos
+de códigos, esse livro é recomendável para os estudantes que buscam começar a
+se aventurar pelo mundo da programação, requerendo apenas certa familiaridade
+com a linguagem de programação C, a qual está coberta e explicada nos vários
+apêndices que constam na leitura, de forma que mesmo um indivíduo com
+conhecimento prévio limitado sobre o assunto será capaz de utilizar a obra como
+fonte de estudo.
+  Sendo uma obra introdutória ao ofício da programação e aos conceitos de
+algoritmos, o professor Paulo Feofiloff começa a leitura sendo enfático com a
+importância do desenvolvimento de boas práticas de programação, ressaltando a
+necessidade de se escrever códigos com layouts padronizados e organizados, além
+de bem documentados, de maneira a facilitar o desenvolvimento de algoritmos
+corretos, eficientes, elegantes e compreensíveis para quem os lê.
+  O livro possui 15 capítulos além dos apêndices já mencionados que partem
+da letra “A” até o “L”. Os três primeiros capítulos configuram uma introdução ao
+tema, abordando os temas das já citadas “boas práticas da programação”
+ensinando com exemplos como realizar uma boa documentação do programa e
+explicando um pouco melhor do que se trata um algoritmo “correto, elegante e
+eficiente”. Além disso, utilizando situações envolvendo vetores, ele introduz a noção
+de recursividade, uma das bases para a resolução de diversos problemas
+complexos que aparecerão nos capítulos posteriores. Em seguida, o livro passa a
+tratar propriamente de seu assunto principal, discorrendo sobre alguns aspectos e
+formas de implementação de algoritmos.
+  Nos capítulos 4, 5 e 6, o leitor é apresentado a 3 tipos diferentes de
+estruturação de dados, sendo elas, respectivamente, Listas encadeadas, Filas e
+Pilhas. Neles, o autor discorre sobre diferentes maneiras de se manipular cada uma
+delas, mostrando a grande utilidade e diversas aplicações possíveis dessas
+estruturas, assim tornando claro o motivo de as estudarmos.No capítulo 7, tem-se o
+estudo dos vetores ordenados, ensinando ao leitor a realizar buscas dentro dessas
+estruturas e a tornar esse processo mais eficiente, habilidade extremamente útil
+para elaboração de algoritmos de comparação e banco de dados.
+  Nos capítulos 8, 9, 10 e 11, o autor apresenta o problema de ordenação de
+um vetor e o soluciona aplicando alguns algoritmos diferentes. Em cada capítulo ele
+apresenta um diferente, sendo eles, respectivamente, formas elementares, o
+algoritmo mergesort, o heapsort e o quicksort, discorrendo sobre as formas de se
+implantar cada um deles, além dos seus pontos fortes e fracos. Esses quatro
+capítulos são essenciais para o aprendizado de algoritmos, pois a ordenação de
+vetores, muitas vezes, é o primeiro passo para a solução de problemas mais
+complexos, e fazer isso da forma mais eficaz possível pode representar a diferença
+entre a funcionalidade ou não do seu algoritmo.
+  O capítulo 12 fala sobre algoritmos enumerativos, capazes de, partindo de
+uma sequência de objetos, retornar todas as subsequências possíveis. Essa forma
+de solucionar um problema demanda bastante poder de processamento, assim
+sendo uma maneira lenta de chegar a uma solução, contudo, ela pode representar
+um bom ponto de partida ou até mesmo a única forma possível de se chegar a uma
+conclusão, sendo necessário conhecê-los. Já no capítulo 13, Paulo Feofiloff
+comenta sobre os algoritmos de busca de palavras em um texto, demonstrando a
+forma trivial e pouco eficiente de o implementar e outras 3 formas mais eficazes de
+o fazer, chamados de primeiro a terceiro algoritmos de Boyer-Moore. Esses
+recursos se mostram muito importantes para elaboração de softwares como
+corretores e para obtenção de dados específicos em entradas de texto.
+  Por fim, nos capítulos 14 e 15 os conceitos de árvores binárias e árvores de
+busca. Essas formas de estruturação de dados, por mais complexas que sejam, são
+de extrema importância, possuindo enorme poder de organização e facilitando
+processos de busca, inserção e remoção, de forma a possuir diversas aplicações
+possíveis no desenvolvimento de softwares.
+  Após sua leitura, torna-se óbvio o auxílio que esse livro apresenta para um
+estudante de ciência da computação cursando uma matéria de algoritmos e
+estruturas de dados 1. Com sua linguagem clara, concisa e direta, além de contar
+com ótimos exemplos de códigos bons e de ruins, esse livro introduz de forma
+excelente todos os assuntos que serão abordados no curso, de maneira a “quebrar
+o gelo” e assim preparando o aluno para se aprofundar na matéria durantes as
+aulas com auxílio do professor.
+  O conteúdo abordado pela obra configura as bases necessárias para o
+desenvolvimento de bons algoritmos e consequentemente de softwares com
+elevada qualidade e desempenho. Sendo assim, dentro do mundo dos
+desenvolvedores, independente que seja no ramo de banco de dados, sistemas
+operacionais, jogos, aplicativos ou mais uma gama de opções, o conhecimento
+adquirido dos tópicos tratados neste livro sem dúvidas se provarão valiosos.
+  No geral, “Algoritmos em Linguagem C”, de Paulo Feofiloff, se mostra uma
+leitura necessária para aqueles que desejam adentrar no mundo da programação,
+apontando os alicerces que precisam ser solidificados para que o estudante tenha
+condições de, por si só, buscar aprender e compreender assuntos e materiais cada
+vez mais complexos acerca do desenvolvimento de algoritmos, atitude essa
+encorajada pelo próprio autor, o qual deixa claro que a jornada do aprendizado está
+apenas começando com seu livro.

@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int compare(const void *a, const void *b) {
+    return strcmp(*(const char **)a, *(const char **)b);
+}
+
+void addpalavra(char **palavras, int *count, char *a) {
+    if (*count >= 5000)
+        return;
+
+    for (int i = 0; i < *count; i++) {
+        if (strcmp(palavras[i], a) == 0)
+            return;
+    }
+
+    palavras[*count] = malloc(strlen(a) + 1);
+    strcpy(palavras[*count], a);
+    (*count)++;
+}
+
+int main() {
+    char *palavras[5000];
+    int count = 0;
+    char linha[201];
+
+    while (fgets(linha, sizeof(linha), stdin)) {
+        char *start = linha;
+        char *end = linha;
+
+        while (*end != '\0') {
+            if (isalpha(*end)) {
+                *end = tolower(*end);
+                end++;
+            }
+            else {
+                if (start != end) {
+                    *end = '\0';
+                    addpalavra(palavras, &count, start);
+                    start = end + 1;
+                }
+                else {
+                    start++;
+                }
+                end++;
+            }
+        }
+
+        if (start != end) {
+            *end = '\0';
+            addpalavra(palavras, &count, start);
+        }
+    }
+
+    qsort(palavras, count, sizeof(char *), compare);
+
+    for (int i = 0; i < count; i++) {
+        printf("%s\n", palavras[i]);
+        free(palavras[i]);
+    }
+
+    return 0;
+}

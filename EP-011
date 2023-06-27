@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct no {
+    int V;
+    struct no *prox;
+};
+typedef struct no *noh;
+
+struct lista {
+    noh *end;
+};
+typedef struct lista *Lista;
+
+void inserelista(Lista L, int t, int v) {
+    noh b = malloc(sizeof(*b));
+    b -> V = v;
+    b -> prox = L->end[t];
+    L->end[t] = b;
+}
+
+
+int main()
+{
+    int x;
+    scanf("%d", &x);
+    for(int k = 0; k < x; k++){
+        int tam, quant;
+        scanf("%d %d", &tam, &quant);
+        int chave, v[quant], i = 0;
+        char teste;
+        while(scanf("%d%c", &chave, &teste) == 2) {
+            v[i] = chave;
+            i++;
+            if(teste == '\n') break;
+        };
+
+    Lista N;
+    N = malloc(sizeof(*N));
+    N -> end = malloc(tam * sizeof(noh));
+    for(int v = 0; v < tam; v++ ) N -> end[v] = NULL;
+
+    for(int j = quant - 1; 0 <= j; j--) {
+        int t = v[j]%tam;
+        inserelista(N, t, v[j]);
+        };
+    for(int i = 0; i < tam; i ++){
+        printf("%d ->", i);
+        for(noh aux = N->end[i]; aux != NULL; aux = aux -> prox) printf(" %d ->", aux->V);
+        printf(" \\");
+        printf("\n");
+        };
+    if(k < x - 1) printf("\n");
+    };
+    return 0;
+}

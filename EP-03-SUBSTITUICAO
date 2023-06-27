@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+  int X[10], k, i, t;
+  for (k = 0; k < 10; k++) {
+    scanf("%d", &X[k]);
+  }
+  for (i = 0; i < 10; i++) {
+    if (X[i] <= 0) X[i] = 1;
+  }
+  for(t = 0; t < 10; t++) {
+    printf("X[%d] = %d\n", t, X[t]);
+  }
+  return 0;
+}

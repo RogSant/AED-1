@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+
+int main() {
+
+    int total, premiado, i, j, d;
+    scanf("%d %d", &total, &premiado);
+
+    char chamada[total][50], nome[50];
+
+    for(d = 0; d < total; d++) {
+        scanf("%s", chamada[d]);
+    }
+    for (i = 0; i < total - 1; i++) {
+        for (j = 0; j < total - 1; j++) {
+            if (strcmp(chamada[j + 1], chamada[j]) < 0) {
+                strcpy(nome, chamada[j + 1]);
+                strcpy(chamada[j + 1], chamada[j]);
+                strcpy(chamada[j], nome);
+                }
+            }
+        }
+
+    printf("%s\n", chamada[premiado - 1]);
+    return 0;
+}

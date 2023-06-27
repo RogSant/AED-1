@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    int teste;
+    scanf("%d", &teste);
+    for(int k = 0; k < teste; k++) {
+        int grupo;
+        scanf("%d", &grupo);
+        char lingua1[20], lingua2[20];
+        scanf("%s", lingua1);
+        int h = 0;
+        for(int f = 1; f < grupo; f++){
+            scanf("%s", lingua2);
+            if (strlen(lingua1) != strlen(lingua2)) h++;
+            else {
+                for(int i = 0; i < strlen(lingua1); i++){
+                    if(lingua1[i] != lingua2[i]) {
+                        h++;
+                        break;
+                    };
+                };
+            };
+        };
+        if(h == 0) printf("%s\n", lingua1);
+        else printf("ingles\n");
+    };
+    return 0;
+}
